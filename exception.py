@@ -43,12 +43,22 @@ def IOError2():
 
 '''
 一个异常可以带上参数，可作为输出的异常信息参数。
+python3中 except ValueError as Argument
+以上版本中 except ValueError , Argument
 
 '''
-def temp_convert(var):
+
+def ErrorArgument(var):
 	try:
 		return int(var)
-	except ValueError, Argument:
-		print "The argument does not contain numbers\t", Argument 
+	except ValueError as Argument:
+		print("reason\t", Argument)
+	except:
+		print('unpected error:',sys.exc_info()[0])
+		raise
 
 ErrorArgument('a')
+
+
+#Python 使用 raise 语句抛出一个指定的异常
+
