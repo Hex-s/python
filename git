@@ -1,0 +1,25 @@
+1.选择目录,将这个目录变成GIT可以管理的仓库
+  git init
+2.连接远程仓库
+  git remote add origin git@github.com:Hex-s/learngit.gi
+3.克隆远程库
+  git clone git@github.com:Hex-s/gitskills.git
+4.创建并切换分支
+  git checkout -b dev  == git branch dev + git checkout dev
+5.提交修改到远程分支上
+    1) git add file 
+    2) git commit -m '提交信息'
+       git push origin dev
+  
+6. git status 命令可以让我们时刻掌握仓库当前的状态
+7. git diff 顾名思义就是查看difference
+8. git log 历史记录,加上--pretty=oneline参数
+9. 切换版本
+    1）git reset --hard HEAD^ 上一个版本就是HEAD^，上上一个版本就是HEAD^^，上100个版本HEAD~100
+    2）git reset --hard 3628164（commit id）
+10. git reflog用来记录每一次命令,在9操作中切换到历史版本，也可以找到被隐藏的commit id
+11. 工作区 git init 的目录
+12. 版本库 工作区中隐藏的 .git 目录
+      Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，
+      还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
+      
