@@ -1,4 +1,6 @@
-#-*-coding:utf-8-*-#
+#!/usr/bin/python
+#-*-coding:utf-8-*-
+
 """
 	open/文件操作
 	open(路径+文件名，读写模式/编码方式)

@@ -10,16 +10,33 @@ def printMe(str):
 printMe('asdasdasdssfa')
 #-----------------------------------------------
 
-#2
+#2 传参
 def printMe2(arg1,*kwargs):
 	print(arg1)
 	for k in kwargs:
 		print(k)
 printMe2(1,{2,3,4})
+
+def fun(name='haha',age=20):
+	print(name,',',age)
+
+# 1)
+fun()  			#haha,20
+# 2)
+fun('tom')      #tom,20
+# 3)
+fun(20)         #20,20
+# 4)
+fun(age=25)		#haha,25
+# 5)
+t = ('jack',50)
+fun(*t)         #jack,50
+# 6)
+dict = {'name':'tom','age':30}
+fun(**dict)     #tom,30
 #-----------------------------------------------
 
-#3
-#lambda
+#3 lambda
 g = lambda x:x**2
 print(g(4))
 
@@ -107,6 +124,7 @@ def func1():
 
 #*****************************************************************
 
+'''
 globals() 和 locals() 函数
 
 根据调用地方的不同，globals()和locals()函数可被用来返回全局和局部命名空间里的名字。
@@ -119,6 +137,7 @@ reload()函数
 当一个模块被导入到一个脚本，模块顶层部分的代码只会被执行一次。
 因此，如果你想重新执行模块里顶层部分的代码，可以用reload()函数。该函数会重新导入之前导入过的模块。语法如下：
 reload(hello)
+'''
 
 
 
