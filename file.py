@@ -1,7 +1,9 @@
-#-*-coding:utf-8-*-#
+#!/usr/bin/python
+#-*-coding:utf-8-*-
+
 """
 	open/文件操作
-	open(路径+文件名，读写模式，编码方式)
+	open(路径+文件名，读写模式/编码方式)
 	读写模式：r只读，r+读写，w新建(会覆盖原有文件)，a追加，b二进制文件 如：‘rb,'wb','r+b'
 	读写模式的类型有：
 		rU 或 Ua 以读的方式打开，同时提供换行符支持
@@ -32,7 +34,16 @@
 	8) file.seek(偏移量,[起始位置])
 		用来移动文件指针  偏移量:单位:比特,可正可负
 		起始位置:0-文件头,默认值;1-当前位置;2-文件尾
+
 	9) file.close()  关闭文件
+	
+	10) 文件重命名 import os os.rename( "test1.txt", "test2.txt" ) 1变成2
+	11）文件删除 os.remove(file_name) 
+	12) 目录创建 os.mkdir("newdir")
+	13) 修改当前目录名称为newdir os.chdir("/home/newdir")
+	14) 返回当前目录 os.getcwd()
+	15) 删除目录 os.rmdir('dirname')
+	
 
 	
 """
@@ -40,25 +51,26 @@
 file = open('1.docx','a+')
 
 #1
-#content = file.read(5)
+content = file.read(5)
 
 #2
-#content = file.readline()
+content = file.readline()
 
 #3
-#content = file.readlines()
+content = file.readlines()
 
 #4
-#content = file.readline(2)
+content = file.readline(2)
 
 #5
-#for line in file:
+for line in file:
+	print(line)
 
 #6
-#file.write('hello\n')  #注意文件的打开方式
+file.write('hello\n')  #注意文件的打开方式
 
 #7
-#tell = file.tell()
+tell = file.tell()
 
 #8
 seek = file.seek(2)

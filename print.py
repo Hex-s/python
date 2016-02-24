@@ -1,3 +1,6 @@
+#!/usr/bin/python
+#-*-coding:utf-8-*-
+
 '''
 Python两种输出值的方式: 表达式语句 和 print() 函数。(第三种方式是使用文件对象的 write() 方法; 标准输出文件可以用 sys.stdout 引用。)
 
@@ -65,3 +68,11 @@ def format_print2():
 	print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
 
 format_print2()
+#替换
+
+def fun(x,y):
+	print('{}:{}'.format(x,y))
+
+t = (1,2)
+fun(*t)
+#http://www.ziqiangxuetang.com/python3/python3-inputoutput.html

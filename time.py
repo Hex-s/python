@@ -1,5 +1,6 @@
 #!/usr/bin/python
 #-*- coding:utf-8 -*-
+
 import time
 
 #自1970-1-1 00:00:00至今的毫秒数
