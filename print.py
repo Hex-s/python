@@ -30,7 +30,7 @@ def pow_three():
 	print('--------------------')
 	print('12'.zfill(5))  #00012
 
-pow_three()
+#pow_three()
 '''
  1   1    1
  2   4    8
@@ -45,12 +45,31 @@ pow_three()
 '''
 
 '''
+end = '' 不换行
 字符串对象的 rjust() 方法, 它可以将字符串靠右, 并在左边填充空格。同理，ljust() 和 center()
 zfill(), 它会在数字的左边填充 0
 
 '''
+import math
+def format_print():
+	print('we are {}'.format('family'))
+	print('I love {0} and {1}'.format('apple', 'orange'))
+	print('I like {c1} and {c2}'.format(c1='white',c2='blue'))
+	print('I am {0} and {attitude}'.format('happy',attitude='optimistic'))
+	#'!a' (使用 ascii()), '!s' (使用 str()) 和 '!r' (使用 repr()) 可以用于在格式化某个值之前对其进行转化:
+	print('PI is {!r}.'.format(math.pi))
+	#可选项 ':' 和格式标识符可以跟着字段名。 这就允许对值进行更好的格式化。
+	print('PI is {0:.3f}.'.format(math.pi))
+#format_print()
 
+def format_print2():
+	table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}
+	print('jack:{0[Jack]} dcab:{0[Dcab]}'.format(table))
+	print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
+
+format_print2()
 #替换
+
 def fun(x,y):
 	print('{}:{}'.format(x,y))
 
