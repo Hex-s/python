@@ -14,11 +14,14 @@
  8. 方法：类中定义的函数。
  9. 对象：通过类定义的数据结构实例。对象包括两个数据成员（类变量和实例变量）和方法。
 
+ __slots__，用tuple定义允许绑定的属性名称，__slots__定义的属性仅对当前类实例起作用，对继承的子类是不起作用的：
+
 '''
 
 class Employee:
 	'所有员工的基类'
 	empCount  = 0
+	 __slots__ = ('name', 'salary') # 用tuple定义允许绑定的属性名称
 
 	'''
 		第一种方法__init__()方法是一种特殊的方法，被称为类的构造函数或初始化方法，当创建了这个类的实例时就会调用该方法
@@ -252,4 +255,28 @@ mt.staticFunc()
 MethodText.classFunc()
 MethodText.staticFunc()     #静态方法，staticFunc , MethodText
 print(MethodText.__name__)  #MethodText
+
+#*******************************************************************************************************************************
+
+class Student(object):
+
+	'''
+	def getbirth(self):	
+		return self._birth
+	'''
+    @property
+    def birth(self):
+        return self._birth
+
+    '''
+    def setbirth(self,value):
+    	self._birth = value
+    '''
+    @birth.setter
+    def birth(self, value):
+        self._birth = value
+
+    @property
+    def age(self):
+        return 2015 - self._birth
 
