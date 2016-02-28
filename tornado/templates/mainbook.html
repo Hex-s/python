@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{{page_title}}</title>
+<link rel="stylesheet" href="{{static_url("css/style.css")}}" />
+</head>
+
+<body>
+	<div id="container">
+    	<head>
+        	{% block header %}<h1>Burts's Books</h1>{% end %}
+        </head>
+        <div id="main">
+        	<div id="content">
+            	{% block body %}{% end %}
+            </div>
+        </div>
+        <footer>
+        	{% block footer %}
+            	<p>
+                	For more information about our selection, hours or events, please email us at 
+                    <a href="mailto:contact@burtsbooks.com">contact@burtsbooks.com</a>.
+                </p>
+                <p>
+                	Follow us on FaceBook at
+                    {% raw linkify("http://fb.me/buttsbooks",extra_params='ref=website') %}
+                    {% raw link %}
+                   
+                </p>
+            {% end %}
+        </footer>
+    </div>
+    <!--<script src="{{static_url("js/jquery.js")}}"></script>-->
+</body>
+</html>
